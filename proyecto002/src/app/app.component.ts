@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import {art} from './ts-cls-articulos';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
