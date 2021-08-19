@@ -183,3 +183,35 @@ function operar(valor1: number, valor2: number, func: (x: number, y:number)=>num
   console.log(operar(3, 7, (x: number,y: number): number => {  return x-y;  }))
   
   console.log(operar(3, 7, (x: number,y: number): number => {  return x*y;  }))
+//***************25********************
+class Persona{
+    protected nombre: string;
+    protected edad: number;
+    constructor(nombre: string, edad: number){
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+    imprimir(){
+        console.log(` Nombre ${this.nombre}`);
+        console.log(` Edad ${this.edad}`);
+    }
+    
+}
+class Empleeado extends Persona{
+    private sueldo: number;
+    constructor(nombre: string, edad:number,sueldo: number){
+        super(nombre,edad);
+        this.sueldo = sueldo;
+    }
+    pagaImpuestos(){
+        if(this.sueldo > 5000)
+            console.log(`${this.nombre} debe pagar impuestos`);
+        else
+            console.log(`${this.nombre} no debe pagar impuestos`);
+    }
+}
+const personal =  new Persona('Juan',44);
+personal.imprimir();
+const empleado1 = new Empleeado('Ana', 22,7000);
+empleado1.imprimir();
+empleado1.pagaImpuestos();
