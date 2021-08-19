@@ -215,3 +215,4 @@ personal.imprimir();
 const empleado1 = new Empleeado('Ana', 22,7000);
 empleado1.imprimir();
 empleado1.pagaImpuestos();
+//***************26********************
