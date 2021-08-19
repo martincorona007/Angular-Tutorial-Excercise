@@ -216,3 +216,113 @@ const empleado1 = new Empleeado('Ana', 22,7000);
 empleado1.imprimir();
 empleado1.pagaImpuestos();
 //***************26********************
+interface Punto{
+    imprimir(): void;
+}
+class PuntoPlano implements Punto{
+    constructor(private x: number, private y: number){
+
+    }
+    imprimir(){
+        console.log(`Punto en el plano (${this.x},${this.y})`);
+    }
+    
+}
+class PuntoEspacio implements Punto{
+    constructor(private x: number, private y:number, private z:number){}
+    imprimir(){
+        console.log(`Punto en el espacio (${this.x}, ${this.y},${this.z})`);
+    }
+}
+let puntoPlano1: PuntoPlano;
+puntoPlano1 = new PuntoPlano(10,4);
+puntoPlano1.imprimir();
+let puntoEspacio1: PuntoEspacio;
+puntoEspacio1 = new PuntoEspacio(20,50,60);
+puntoEspacio1.imprimir();
+//***************27********************
+//TypeScript permite crear clases y funciones que administren distintos tipos de datos.
+//clase tradicional
+class PilaEnteros{
+    private vec:number [] = [];
+    insertar(x: number){
+        this.vec.push(x);
+    }
+    extraer(){
+        if(this.vec.length > 0)
+            return this.vec.pop();
+        else    
+            return null;
+    }
+}
+class PuelaStrings{
+    private vec: string [] = [];
+    insertar(x: string){
+        this.vec.push(x);
+    }
+    extraer(){
+        if(this.vec.length > 0 )
+            return this.vec.pop();
+        else
+            return null;
+    }
+}
+let pila1 = new PilaEnteros();
+pila1.insertar(20);
+pila1.insertar(43);
+pila1.insertar(1);
+console.log(pila1.extraer());
+
+let pila2 = new PilaStrings();
+pila2.insertar('juan');
+pila2.insertar('ana');
+pila2.insertar('luis');
+console.log(pila2.extraer());
+//clase generica
+class PilaGenerica<T>{
+    private vec:T[] = [];
+    insertar(x: T){
+        this.vec.push(x);
+    }
+    extraer(){
+        if(this.vec.length > 0 )
+            return this.vec.pop();
+        else
+            return null;
+    }
+}
+let pila3: PilaGenerica<number>;
+pila3 = new PilaGenerica<number>();
+pila3.insertar(20);
+pila3.insertar(42);
+pila3.insertar(1);
+console.log(pila3.extraer());
+
+let pila4: PilaGenerica<string>;
+pila4 = new PilaGenerica<string>();
+pila4.insertar('juan');
+pila4.insertar('ana');
+pila4.insertar('luis');
+console.log(pila4.extraer());
+//program that create a stack of another class
+class PilaGenerica <T>{
+    private vec: T [] = [];
+    insert(x: T){
+        this.vec.push(x);
+    }
+    extract(){
+        if(this.vec.length > 0)
+            return this.vec.pop();
+        else    
+            return null;
+    }
+}
+class Person{
+    constructor(public name: string, public age: number){}
+}
+let stack5: PilaGenerica <Person>;
+stack5 = new StackGenerica <Person>();
+stack5.insert(new Person('pedro',33));
+stack5.insert(new Person('maria',33));
+stack5.insert(new Person('marcos',33));
+console.log(stack5.extract());
