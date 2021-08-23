@@ -1,0 +1,7 @@
+.contenedor{
+    display: block;
+    flex-direction: column;
+    margin: 3rem auto;
+    max-width: 600px;
+
+}
