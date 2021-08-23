@@ -1,0 +1,14 @@
+<div class="contenedor">
+  <mat-form-field>
+    <input matInput [(ngModel)]="valor1" type="number" placeholder="Ingrese primer valor">
+  </mat-form-field>
+  <nat-form-field>
+    <input matInput [(ngModel)]="valor2" type="number" placeholder="Ingrese segundo valor">
+  </nat-form-field>
+  <mat-checkbox [(ngModel)]="opcion1">Sumar</mat-checkbox>
+  <mat-checkbox [(ngModel)]="opcion2">Resta</mat-checkbox>
+  <mat-checkbox [(ngModel)]="opcion3">Multi</mat-checkbox>
+  <mat-checkbox [(ngModel)]="opcion4">Dividir</mat-checkbox>
+  <button mat-raised-button color="primary" (click)="operar()">Operar</button>
+  <p>{{resultado}}</p>
+</div>
