@@ -1,0 +1,14 @@
+<div class="contenedor">
+  <mat-form-field>
+    <input matInput [(ngModel)]="valor1" type="number" placeholder="Ingrese el primer numero">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="valor2" type="number" placeholder="Ingrese el segundo numero">
+  </mat-form-field>
+  <mat-slide-toggle [(ngModel)]="opcion1">Sumar</mat-slide-toggle>
+  <mat-slide-toggle [(ngModel)]="opcion2">Sub</mat-slide-toggle>
+  <mat-slide-toggle [(ngModel)]="opcion3">Multi</mat-slide-toggle>
+  <mat-slide-toggle [(ngModel)]="opcion4">Divi</mat-slide-toggle>
+  <button mat-raised-button color="primary" (click)="operar()">Operar</button>
+  <p>{{resultado}}</p>
+</div>
