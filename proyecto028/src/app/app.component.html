@@ -1,0 +1,19 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" #tabla1>
+    <ng-container matColumnDef="codigo">
+      <th mat-header-cell *matHeaderCellDef>Codigo</th>
+      <td mat-cell *matCellDef="let articulo">{{articulo.codigo}}</td>
+    </ng-container>
+    <ng-container matColumnDef="descripcion">
+      <th mat-header-cell *matHeaderCellDef>Descripcon</th>
+      <td mat-cell *matCellDef="let articulo">{{articulo.descripcion}}</td>
+    </ng-container>
+    <ng-container matColumnDef="precio">
+      <td mat-header-cell *matHeaderCellDef>Preciso</td>
+      <td mat-cell *matCellDef="let articulo">{{articulo.precio}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5,10,15]" showFirstLastButtons></mat-paginator>
+</div>
