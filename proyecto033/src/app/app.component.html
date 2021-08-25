@@ -1,0 +1,25 @@
+<button mat-button [matMenuTriggerFor]="periodicos">Periodicos</button>
+<mat-menu #periodicos="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="argentina">Periodicos de ARGENTINA</button>
+  <button mat-menu-item [matMenuTriggerFor]="chile">Periodicos de Chile</button>
+</mat-menu>
+<mat-menu #argentina="matMenu">
+  <a mat-menu-item href="https://www.clarin.com">Clarin</a>
+  <a mat-menu-item href="https://www.ambito.com">Ambito</a>
+  <a mat-menu-item href="https://www.infobae.com">Infobae</a>
+  <a mat-menu-item href="https://www.cronista.com">Cronista</a>
+  <a met-menu-item href="https://www.lanacion.com">La Nacion</a>
+  
+</mat-menu>
+<mat-menu #chile="matMenu">
+  <a mat-menu-item href="https://www.emol.com">El Mercurio</a>
+  <a mat-menu-item href="https://www.latercera.com">La Tercera</a>
+  <a mat-menu-item href="https://www.lacuarta.com">La Cuarta</a>
+</mat-menu>
+<button mat-button [matMenuTriggerFor]="buscadores">Buscadores de internete</button>
+<mat-menu #buscadores="matMenu">
+  <a mat-menu-item href="https://www.google.com">Google</a>
+  <a mat-menu-item href="https://www.yahoo.com">Yahoo</a>
+  <a mat-menu-item href="https://www.bing.com">Bing</a>
+  <a mat-menu-item href="https://duckduckgo.com">DuckDuckGo</a>
+</mat-menu>
