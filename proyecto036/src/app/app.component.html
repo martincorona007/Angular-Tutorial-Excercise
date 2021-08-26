@@ -1,0 +1,22 @@
+<div style="width: 70%; margin: 0 auto;" *ngIf="post!=null">
+  <mat-expansion-panel *ngFor="let p of post">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h2>{{p.title}}</h2>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    {{p.body}}
+  </mat-expansion-panel>
+</div>
+<div style="width: 70%;margin:0 auto" *ngIf="post!=null">
+  <mat-accordion>
+      <mat-expansion-panel *ngFor="let p of post">
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+                  <h2>{{p.title}}</h2>
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          {{p.body}}
+      </mat-expansion-panel>
+  </mat-accordion>
+</div>
