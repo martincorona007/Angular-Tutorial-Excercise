@@ -1,0 +1,17 @@
+<div class="contenedor">
+  <mat-card class="tarjeta" *ngIf="usuario!=null">
+    <mat-card-header>
+      <div mat-card-avatar><img mat-card-image src="{{usuario.results[0].picture.thumbnail}}" class="circular"></div>
+      <mat-card-title>{{usuario.results[0].name.last}},{{usuario.results[0].name.first}}</mat-card-title>
+      <mat-card-subtitle>{{usuario.results[0].gender == 'male'? 'varon':'mujer'}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{usuario.results[0].picture.large}}">
+    <mat-card-content>
+      <p>Telefono: {{usuario.results[0].phone}}</p>
+      <p>Email: {{usuario.results[0].email}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button (click)="recargar()" color="primary" >Otra Persona?</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
