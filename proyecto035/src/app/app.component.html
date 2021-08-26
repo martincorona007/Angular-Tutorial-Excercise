@@ -1,0 +1,9 @@
+<div style="height: 100%;">
+  <mat-toolbar>
+      <button mat-button (click)="fijar(0)">OpenStreetMap</button>
+      <button mat-button (click)="fijar(1)">Google Maps</button>
+      <button mat-button (click)="fijar(2)">Microsoft Maps</button>
+  </mat-toolbar>
+  <iframe width="99%" height="92%" [src]="urlSegura">
+</iframe>
+</div>
