@@ -1,0 +1,24 @@
+<p>Ingrese primer valor
+  <input [(ngModel)]="valor1" type="number">
+</p>
+<p>Ingrese segundo valor
+  <input [(ngModel)]="valor2" type="number">
+</p>
+<p>
+  <select [(ngModel)]="operacion">
+    <option value="ninguna">Elija una opcion</option>
+    <option value="sumar">Sumar</option>
+    <option value="restar">Restar</option>
+    <option value="multiplicar">multiplicar</option>
+    <option value="dividir">Dividir</option>
+  </select>
+</p>
+<p>Resultado:
+  <span [ngSwitch]="operacion">
+    <span *ngSwitchCase="'sumar'">{{valor1 + valor2}}</span>
+    <span *ngSwitchCase="'restar'">{{valor1 - valor2}}</span>
+    <span *ngSwitchCase="'multiplicar'">{{valor1 * valor2}}</span>
+    <span *ngSwitchCase="'dividir'">{{valor1 / valor2}}</span>
+    <span *ngSwitchDefault>(No eligio operacion)</span>
+  </span>
+</p>
