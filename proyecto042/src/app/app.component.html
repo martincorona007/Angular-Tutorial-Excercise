@@ -1,0 +1,4 @@
+<div *ngIf="usuario!=null; else espera">
+  <boot-tarjeta [datos]="usuario[0]" (presionopcion)="presion()"></boot-tarjeta>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>
