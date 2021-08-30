@@ -1,0 +1,13 @@
+<form [formGroup]="formularioContacto" (ngSubmit)="submit()">
+  <p>Nombre:
+    <input type="text" formControlName="nombre">
+  </p>
+  <p> Mail:
+    <input type="text" formControlName="mail">
+  </p>
+  <p>Mensaje<br>
+    <textarea rows="10" cols="70" formControlName="mensaje"></textarea>
+  </p>
+  <button type="submit">Confimar</button>
+</form>
+<div>{{datos}}</div>
