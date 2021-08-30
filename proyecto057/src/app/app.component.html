@@ -1,0 +1,23 @@
+<form [formGroup]="formularioConversion" (ngSubmit)="submit()">
+  <p> Ingrese un numero decimal:
+    <input type="text" formControlName="numerodecimal">
+  </p>
+  <p>Convertir a:<br>
+    <input type="radio" formControlName="base" value="octal">Octal
+    <input type="radio" formControlName="base" value="hexadecimal">Hexadecimal
+  </p>
+  <p>Evelar a:
+    <select formControlName="potencia">
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+  </p>
+  <p><input type="checkbox" formControlName="largo">Mostrar cantidad de digitos</p>
+  <p><button type="submit">Confirmar</button></p>
+</form>
+<div>
+  <p>Conversion {{conversion}}</p>
+  <p>Potencia {{potenciaNumero}}</p>
+  <p>Cantidad de digitos {{cantidad}}</p>
+</div>
