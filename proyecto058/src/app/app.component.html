@@ -1,0 +1,25 @@
+<form [formGroup]="formAlumno" (ngSubmit)="submit()">
+  <p>Dni :
+    <input type="text" formControlName="dni">
+  </p>
+  <p>
+    Nombre:
+    <input type="text" formControlName="nombre">
+  </p>
+  <div formGroupName="notas">
+    <p> Primer Nota:
+      <input type="text" formControlName="nota1">
+    </p>
+    <p> Segunda nota:
+      <input type="text" formControlName="nota2">
+    </p>
+    <p>
+      Tercer nota:
+      <input type="text" formControlName="nota3">
+    </p>
+  </div>
+  <p><button type="submit"> Confirmar</button></p>
+</form>
+<div>
+  <p>Resultado: {{resultado}}</p>
+</div>
